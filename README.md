@@ -1,40 +1,174 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Marketplace de Cartas
 
-## Getting Started
+Este es un marketplace donde los usuarios pueden ver, comprar y vender cartas de Pokémon, Yu-Gi-Oh! y Magic. Está desarrollado con Next.js, TypeScript, Tailwind CSS y Supabase.
 
-First, run the development server:
+## 🚀 Tecnologías utilizadas
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Supabase (Base de datos y autenticación)
+- Vercel (opcional para despliegue)
+
+---
+
+## 🧑‍💻 Requisitos previos
+
+Asegúrate de tener instalado:
+
+- Node.js v18 o superior
+- npm o yarn
+- Git
+- Cuenta en [Supabase](https://supabase.com)
+
+---
+
+## 📦 Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/TU_USUARIO/marketplace.git
+cd marketplace
+```
+
+Instala las dependencias:
+
+```bash
+npm install
+# o
+yarn install
+```
+
+---
+
+## ⚙️ Configuración
+
+1. Crea un archivo `.env.local` y agrega tus variables de entorno:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_anonima
+```
+
+2. Asegúrate de que tu Supabase tenga las siguientes tablas:
+
+- `users`
+- `cards`
+- `listings`
+
+> Puedes revisar el esquema en el archivo `supabase/schema.sql` si está incluido.
+
+---
+
+## ▶️ Cómo iniciar el proyecto
+
+Inicia el entorno de desarrollo con:
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esto abrirá la app en [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🧪 Scripts útiles
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- `npm run build` – compila el proyecto para producción
+- `npm run lint` – analiza el código con ESLint
+- `npm run format` – formatea el código con Prettier
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 👥 Colaboradores
 
-To learn more about Next.js, take a look at the following resources:
+- Héctor
+- Alan
+- Benjamín
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✅ To-do (puedes actualizar esta sección)
 
-## Deploy on Vercel
+- [x] Autenticación de usuario
+- [x] Subida y venta de cartas
+- [ ] Filtros de búsqueda
+- [ ] Carrito de compras
+- [ ] Pago con tarjeta
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 📄 Licencia
+
+MIT © 2025 — [Tu Nombre o equipo]
+
+---
+
+## 🌐 [Opcional] Despliegue en Vercel
+
+Este proyecto puede ser desplegado fácilmente en [Vercel](https://vercel.com):
+
+1. Crear cuenta en [vercel.com](https://vercel.com)
+2. Importar este repositorio desde GitHub
+3. Configurar las variables de entorno:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+```
+
+4. Click en **Deploy** y listo.
+
+🔗 URL de producción: https://TUDOMINIO.vercel.app (ajusta según tu caso)
+
+---
+
+## 💻 Clonar el proyecto completo en un nuevo equipo
+
+Para clonar todo el repositorio con todas las ramas:
+
+```bash
+git clone https://github.com/TU_USUARIO/marketplace.git
+cd marketplace
+git fetch --all
+```
+
+Verifica que tienes todas las ramas disponibles:
+
+```bash
+git branch -r
+```
+
+Si deseas cambiarte a una rama específica (por ejemplo `alan/sell`):
+
+```bash
+git checkout -b alan/sell origin/alan/sell
+```
+
+Luego instala las dependencias del proyecto:
+
+```bash
+npm install
+# o
+yarn install
+```
+
+Y crea el archivo `.env.local` con tus variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://xxxxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_anonima
+```
+
+Finalmente, ejecuta la app:
+
+```bash
+npm run dev
+```
+
+Abre tu navegador en: [http://localhost:3000](http://localhost:3000)
+
+---
